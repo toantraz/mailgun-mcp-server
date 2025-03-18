@@ -1,4 +1,4 @@
-# Mailgun MCP Server 
+# Mailgun MCP Server
 [![MCP](https://img.shields.io/badge/MCP-Server-blue.svg)](https://github.com/modelcontextprotocol)
 
 ## Overview
@@ -48,8 +48,27 @@ A Model Context Protocol (MCP) server implementation for [Mailgun](https://mailg
 
 ## Testing
 
+Run the local test suite with:
+
 ```bash
 NODE_ENV=test npm test
+```
+
+### Sample Prompts with Claude
+
+#### Send an Email
+
+> Note: sending an email currently (2025-03-18) seems to require a paid account with Anthropic. You'll get a silent failure on the free account
+
+```
+Can you send an email to EMAIL_HERE with a funny email body that makes it sound like it's from the IT Desk from Office Space?
+Please use the sending domain DOMAIN_HERE, and make the email from "postmaster@DOMAIN_HERE"!
+```
+
+#### Fetch and Visualize Sending Statistics
+
+```
+Would you be able to make a chart with email delivery statistics for the past week?
 ```
 
 ## Debugging
