@@ -30,7 +30,6 @@ const endpoints = [
     "POST /v3/{domain_name}/messages",
     "GET /v4/domains",
     "GET /v4/domains/{name}",
-    "GET /v1/dkim/keys",
     "GET /v3/domains/{name}/sending_queues",
     "GET /v5/accounts/subaccounts/ip_pools",
     "GET /v3/ips",
@@ -67,23 +66,7 @@ const endpoints = [
     "GET /v3/{domainID}/whitelists/{value}",
     "GET /v3/{domainID}/whitelists",
     "GET /v3/accounts/email_domain_suppressions/{email_domain}",
-    "GET /v3/routes",
-    "GET /v3/routes/{id}",
-    "GET /v3/routes/match",
-    "GET /v3/lists",
-    "GET /v3/lists/{list_address}/members",
-    "GET /v3/lists/{list_address}/members/{member_address}",
-    "GET /v3/lists/{list_address}",
-    "GET /v3/lists/pages",
-    "GET /v3/lists/{list_address}/members/pages",
-    "GET /v5/accounts/subaccounts/{subaccount_id}",
-    "GET /v5/accounts/subaccounts",
     "GET /v5/accounts/limit/custom/monthly",
-    "GET /v1/keys",
-    "GET /v2/ip_whitelist",
-    "GET /v5/users",
-    "GET /v5/users/{user_id}",
-    "GET /v5/users/me"
 ];
 
 /**
