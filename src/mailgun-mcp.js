@@ -1,5 +1,4 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import https from "node:https";
 import { URL } from "node:url";
@@ -563,20 +562,11 @@ export async function main() {
     
     // Generate tools from the spec
     generateToolsFromOpenApi(openApiSpec);
-    
-    // Connect to the transport
-    const transport = new StdioServerTransport();
-    await server.connect(transport);
-    console.error("Mailgun MCP Server running on stdio");
+
   } catch (error) {
     console.error("Fatal error in main():", error);
     if (process.env.NODE_ENV !== 'test') {
       process.exit(1);
     }
   }
-}
-
-// Only auto-execute when not in test environment
-if (process.env.NODE_ENV !== 'test') {
-  main();
 }
